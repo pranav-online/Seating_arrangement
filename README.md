@@ -129,6 +129,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - your.email@example.com
+Your Name - pranav05gedela@gmail.com
+linkedin - Gedela Pranav
 
 Project Link: [https://github.com/yourusername/exam-seating-system](https://github.com/yourusername/exam-seating-system)
