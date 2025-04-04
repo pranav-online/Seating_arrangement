@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Seating Arrangement{% endblock %}
+
+{% block head %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="seating-container">
+    <h1>Generate Seating Plan</h1>
+    
+    <div class="form-group">
+        <label>Classrooms: <input type="number" id="classrooms" min="1" value="3"></label>
+        <label>Students/Class: <input type="number" id="studentsPerClass" min="1" value="30"></label>
+    </div>
+    
+    <div class="upload-section">
+        <input type="file" id="fileInput" accept=".xlsx,.xls" required>
+        <button id="uploadBtn" class="btn">Upload Student Data</button>
+        <div id="uploadStatus"></div>
+    </div>
+    
+    <div id="departmentSection" class="hidden">
+        <h3>Select Departments:</h3>
+        <div id="departmentList"></div>
+        <button id="generateBtn" class="btn">Generate Seating</button>
+    </div>
+    
+    <div id="result"></div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}
